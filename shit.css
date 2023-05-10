@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+  }
+  .box{
+    background-color: black;
+    color: red;
+    font-size: 60px;
+}
+body{
+    margin: 0;
+    color: white;
+    background-color: grey;
+}
+
+main {
+    width: 100px;
+  }
+aside {
+    flex: 0 0 auto;
+    width: 400px;
+  }
+header{
+  display: flex;
+  background-color: black;
+}
+.negr{
+text-align: center;
+}
+
+
+.container {
+    display: flex;
+}
+li {
+  display: inline-block;
+  padding: 10px;
+}
+li > a {
+   text-decoration: none;
+   font-size: 25px;
+   color: rgb(254, 2, 2);
+}
+li > a:hover {
+   color: rgb(211,211,211);
+   text-decoration: underline;
+
+}
+  .galerie {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 250px);
+  }
+  
+  .obrazek {
+    background-size: cover;
+    background-position: center;
+    /*background-color: blueviolet;*/
+  }
+  
+  #k1 {
+    background-image: url(./f14.jpg);
+  }
+  
+  #k2 {
+    background-image: url(./f14.jpg);
+    background-position-y: 30%;
+  }
+  
+  #k3 {
+    background-image: url(./f14.jpg);
+    background-position: left;
+  }
+  
+  #k4 {
+    background-image: url(./f14.jpg);
+  }
+  
+  #k5 {
+    background-image: url(./f14.jpg);
+  }
+  
+  #k6 {
+    background-image: url(./f14.jpg);
+  }
+  
+  @media only screen and (max-width: 780px) {
+    .galerie {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 250px);
+      grid-auto-flow: dense;
+    }
+  
+    #k1, #k3 {
+      grid-column: 1 / 3;
+    }
+  }
